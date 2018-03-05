@@ -6,13 +6,14 @@ var under_floor = function(value,n){
   return result
 }
 
+app.set("port",(process.env.PORT || 3000));
 app.get("/",function(req,res){
   var man = Math.random();
   var women = 1.0 - man;
   man = under_floor(man,2);
   women = under_floor(women,2);
   var gender = -1;
-  if(man>=women){ gender=0 }
+  if(man>=women){ gender=0 ß}
   else if(man<women){ gender=1 }
   var resultJSON = {
     "gender":gender,
@@ -24,4 +25,6 @@ app.get("/",function(req,res){
   res.json(resultJSON);
 })
 
-app.listen(3000);
+app.listen(app.get("port"),function(){
+  console.log("runing on " + app.get("port"));
+});
