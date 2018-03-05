@@ -13,7 +13,7 @@ app.get("/",function(req,res){
   man = under_floor(man,2);
   women = under_floor(women,2);
   var gender = -1;
-  if(man>=women){ gender=0 ß}
+  if(man>=women){ gender=0 }
   else if(man<women){ gender=1 }
   var resultJSON = {
     "gender":gender,
