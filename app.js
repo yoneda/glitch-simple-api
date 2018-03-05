@@ -6,7 +6,7 @@ var under_floor = function(value,n){
   return result
 }
 
-app.set("port",(process.env.PORT || 3000));
+// app.set("port",(process.env.PORT || 3000));
 app.get("/",function(req,res){
   var man = Math.random();
   var women = 1.0 - man;
@@ -25,6 +25,6 @@ app.get("/",function(req,res){
   res.json(resultJSON);
 })
 
-app.listen(app.get("port"),function(){
-  console.log("runing on " + app.get("port"));
+app.listen(process.env.PORT ,function(){
+  console.log("runing on " + process.env.PORT);
 });
