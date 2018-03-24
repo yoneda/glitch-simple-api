@@ -7,6 +7,14 @@ var under_floor = function(value,n){
 }
 
 // app.set("port",(process.env.PORT || 3000));
+
+// CORS を許可する
+app.use(function(req,res,next){
+  res.header("Access-Control-Allow-Origin","*");
+  res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.get("/",function(req,res){
   var man = Math.random();
   var women = 1.0 - man;
