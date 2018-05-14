@@ -6,8 +6,6 @@ var under_floor = function(value,n){
   return result
 }
 
-// app.set("port",(process.env.PORT || 3000));
-
 // CORS を許可する
 app.use(function(req,res,next){
   res.header("Access-Control-Allow-Origin","*");
