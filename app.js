@@ -13,7 +13,7 @@ app.use(function(req,res,next){
   next();
 });
 
-app.get("/",function(req,res){
+app.get("/gender",function(req,res){
   var man = Math.random();
   var women = 1.0 - man;
   man = under_floor(man,2);
@@ -31,6 +31,7 @@ app.get("/",function(req,res){
   res.json(resultJSON);
 })
 
-app.listen(process.env.PORT ,function(){
-  console.log("runing on " + process.env.PORT);
+var port = 3000;
+app.listen(port, function(){
+  console.log("running on " + port);
 });
