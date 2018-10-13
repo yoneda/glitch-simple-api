@@ -32,6 +32,6 @@ app.get("/gender",function(req,res){
 })
 
 var port = 3000;
-app.listen(port, function(){
+app.listen(process.env.PORT || port, function(){
   console.log("running on " + port);
 });
